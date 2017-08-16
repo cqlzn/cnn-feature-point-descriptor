@@ -1,5 +1,4 @@
 function match_point = cnn_dis_match(im1,im2,points1,points2,deploy,caffemodel)
-%each row of match_point is a pair of corresponding patches' point index
 
 net = caffe.Net(deploy, caffemodel, 'test');
 caffe.set_mode_gpu();

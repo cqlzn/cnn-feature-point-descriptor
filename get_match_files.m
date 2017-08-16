@@ -42,7 +42,7 @@ net = caffe.Net(deploy, caffemodel, 'test');
 
 caffe.set_mode_gpu();
 caffe.set_device(0);
-
+%%
 for i = 1:im_num
     ims{i}.name = im_names{i};
     ims{i}.matrix = imread(fullfile(image_path,ims{i}.name));
@@ -63,7 +63,7 @@ for i = 1:im_num
 end
 caffe.reset_all();
 match_points_cell = cell(im_num,im_num);
-
+%%
 for i = 1:im_num-1
     name1 = ims{i}.name;
     main_name1 = ims{i}.name(1:end-suffix_len-1);

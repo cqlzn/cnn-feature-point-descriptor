@@ -30,8 +30,8 @@ if size(im2,3) == 3, im_g2 = rgb2gray(im2); else im_g2 = im1; end
 points1 = unique(f1(2:-1:1,:)','rows');
 points2 = unique(f2(2:-1:1,:)','rows');
 %% match two images
-% match_points = cnn_dis_match(im1,im2,points1,points2,'models/A16.prototxt','models/A16.caffemodel');
-match_points = cnn_dis_match(im1,im2,points1,points2,'models/C128.prototxt','models/C128.caffemodel');
+match_points = cnn_dis_match(im1,im2,points1,points2,'models/A16.prototxt','models/A16.caffemodel');
+% match_points = cnn_dis_match(im1,im2,points1,points2,'models/C128.prototxt','models/C128.caffemodel');
 fprintf('Find %d match points!\n', size(match_points,1));
 %% show matching results
 if num_of_lines ~= -1 && num_of_lines <= size(match_points,1)
