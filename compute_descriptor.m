@@ -1,8 +1,6 @@
 function discriptor = compute_descriptor(im, points, net, force_gray)
 
-if nargin < 4
-    force_gray = 1;
-end
+if nargin < 4, force_gray = 1; end
 
 input_size = size(net.blobs('data').get_data);
 discriptor_length = size(net.blobs('feat').get_data, 1);

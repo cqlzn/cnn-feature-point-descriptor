@@ -1,20 +1,13 @@
 function match_pairs(im1_path,im2_path,num_of_lines,resz)
 
-if nargin < 3
-    num_of_lines = -1; %show all matching lines(-1) or limited lines(positive integer)
-end
+ %show all matching lines(-1) or limited lines(positive integer)
+if nargin < 3, num_of_lines = -1; end
+ 
+% resize input images 
+if nargin < 4, resz = 1;end
 
-if nargin < 4
-    resz = 1;  % resize input images 
-end
-
-if ~exist(im1_path, 'file')
-    error('Image %s not found!\n',im1_path);
-end
-
-if ~exist(im2_path, 'file')
-    error('Image %s not found!\n',im2_path);
-end
+if ~exist(im1_path, 'file'), error('Image %s not found!\n',im1_path); end
+if ~exist(im2_path, 'file'), error('Image %s not found!\n',im2_path); end
 
 im1 = imread(im1_path);
 im2 = imread(im2_path);

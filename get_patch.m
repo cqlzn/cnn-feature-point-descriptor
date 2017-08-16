@@ -1,8 +1,6 @@
 function patch = get_patch(im, point, patch_size, force_gray)
 
-if nargin < 4
-    force_gray = 1;
-end
+if nargin < 4, force_gray = 1; end
 
 [height, width, channel] = size(im);
 patch = zeros(patch_size,patch_size,channel,'uint8');
