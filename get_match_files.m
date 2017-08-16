@@ -1,11 +1,9 @@
-function [ims,match_points_cell] = get_match_files(image_path,output_file_path,suffix,deploy,caffemodel)
+function [ims,match_points_cell] = get_match_files(image_path,output_file_path,suffix)
 
-if nargin < 4
-    deploy = 'models/C128.prototxt';
-    caffemodel = 'models/C128.caffemodel';
-end
+% deploy = 'models/A16.prototxt'; caffemodel = 'models/A16.caffemodel';
+deploy = 'models/C128.prototxt'; caffemodel = 'models/C128.caffemodel';
 
-if nargin<3 suffix = 'jpg'; end
+if nargin<3, suffix = 'jpg'; end
 
 suffix_len = length(suffix);
 
