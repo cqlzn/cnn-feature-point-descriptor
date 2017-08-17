@@ -5,17 +5,21 @@ This is a part of our research, we will release more CNN descriptor models in th
 Below is a guide for how to use our descriptor. We assume [Caffe](https://github.com/BVLC/caffe) and [vlfeat](http://www.vlfeat.org/) is intalled.
 
 # USAGE:
-Download the model:
+## Download the model:
 ```
 run models/get_models.m
 ```
+Two different models are made available. A16 runs faster, and C128 is more accurate. Choose one according to the your requirement.
 
-Matching 2 images (This will show the matching results on the screen.):
+
+## Matching 2 images:
 ```
 match_pairs(im1_path, im2_path)
 ```
-
-Write the matching results to text for other purpose:
+This will show the matching results on the screen.
+ 
+ 
+## Write the matching results to text for other purpose:
 ```
 get_match_files(image_path,output_file_path,'jpg')
 ``` 
